@@ -15,6 +15,7 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
+  position: relative;
   /* background-color: #60b347; */
 }
 
@@ -22,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 20px;
+  padding: 10px 20px;
 }
 
 #again{
@@ -32,6 +33,7 @@ body {
   padding: 5px 10px;
   font-size: large;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .mid{
@@ -55,7 +57,7 @@ body {
   color: #222;
   text-align: center;
   line-height:80px;
-  z-index: 100;
+  z-index: 1;
 
 }
 
@@ -114,6 +116,15 @@ main{
   padding: 10px 20px;
   outline: none;
   border: none;
+}
+
+.gif{
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+  position: absolute;
+  top:0;
+  display: none;
 }
 
 
