@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+#again{
+  font-family: inherit;
+  height: 40px;
+  width:fit-content;
+  padding: 5px 10px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.mid{
+  margin: 80px 0;
+}
+.mid span{
+  display: block;
+  width:fit-content;
+  margin: 0 auto;
+  font-size: x-large;
+}
+
+#correct-ans-contianer{
+  position:relative;
+  display:block;
+  width: 200px;
+  height: 80px;
+  margin: 0 auto;
+  font-size: xxx-large;
+  background-color: #eee;
+  color: #222;
+  text-align: center;
+  line-height:80px;
+  z-index: 100;
+
+}
+
+.low{
+  position: relative;
+}
+
+.low::before {
+  position: absolute;
+  top: 50%;
+  content: "\a0";
+  height: 5px;
+  width :100%;
+  background-color: white;
+  z-index: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  margin-top:150px;
+  /* justify-content: space-around; */
+}
+
+.left ,.right{
+  display: flex;
+  flex:2;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right{
+  flex:1;
+  align-items:flex-start;
+}
+
+#g-num{
+  font: inherit;
+  background-color: #222;
+  height: 60px;
+  width: 150px;
+  outline: none;
+  border:2px solid white;
+  font-size: large;
+  color: white;
+  padding:0 10px;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+#check{
+  font:inherit;
+  background-color: white;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+
+
+
