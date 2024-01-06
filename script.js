@@ -29,7 +29,7 @@ checkButton.addEventListener("click",()=>{
         gif[0].style.display = "block"
         const Highscore = localStorage.getItem("HighScore"); 
         if(Highscore != null && initialScore > Highscore)
-        localStorage.setItem("HighScore",initialScore)
+        localStorage.setItem("HighScore",`${initialScore}`)
     }
     else{
         score.innerHTML = `score : ${--initialScore}`;
