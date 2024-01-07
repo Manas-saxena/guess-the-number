@@ -2,7 +2,6 @@
 
 let randomNumber;
 let initialScore = 20;
-let Highscore =0 
 window.onload = ()=>{
     randomNumber = Math.floor((Math.random()*20)+1);
     score.innerHTML = `score : ${initialScore}`
@@ -30,7 +29,6 @@ checkButton.addEventListener("click",()=>{
         gif[0].style.display = "block"
         const Highscore = localStorage.getItem("HighScore"); 
         if(Highscore != null && initialScore > Highscore){
-            Highscore = initialScore;
             localStorage.setItem("HighScore",`${initialScore}`)
         }
     }
