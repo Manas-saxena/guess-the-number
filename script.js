@@ -2,10 +2,11 @@
 
 let randomNumber;
 let initialScore = 20;
+let Highscore =0 
 window.onload = ()=>{
     randomNumber = Math.floor((Math.random()*20)+1);
     score.innerHTML = `score : ${initialScore}`
-    highscore.innerHTML = `High Score : ${localStorage.getItem("HighScore")==null?0:localStorage.getItem("HighScore")}`
+    highscore.innerHTML = `High Score : ${localStorage.getItem("HighScore")==null?Highscore:localStorage.getItem("HighScore")}`
     console.log(randomNumber)
 }
 
@@ -28,8 +29,10 @@ checkButton.addEventListener("click",()=>{
         corAnsCont.innerHTML= `${randomNumber}`
         gif[0].style.display = "block"
         const Highscore = localStorage.getItem("HighScore"); 
-        if(Highscore != null && initialScore > Highscore)
-        localStorage.setItem("HighScore",`${initialScore}`)
+        if(Highscore != null && initialScore > Highscore){
+            Highscore = initialScore;
+            localStorage.setItem("HighScore",`${initialScore}`)
+        }
     }
     else{
         score.innerHTML = `score : ${--initialScore}`;
