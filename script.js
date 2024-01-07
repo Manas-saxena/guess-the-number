@@ -28,7 +28,7 @@ checkButton.addEventListener("click",()=>{
         corAnsCont.innerHTML= `${randomNumber}`
         gif[0].style.display = "block"
         const Highscore = localStorage.getItem("HighScore"); 
-        if(Highscore != null && initialScore > Highscore){
+        if(Highscore == null || initialScore > Highscore){
             localStorage.setItem("HighScore",`${initialScore}`)
         }
     }
