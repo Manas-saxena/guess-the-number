@@ -5,7 +5,7 @@ let initialScore = 20;
 window.onload = ()=>{
     randomNumber = Math.floor((Math.random()*20)+1);
     score.innerHTML = `score : ${initialScore}`
-    highscore.innerHTML = `High Score : ${localStorage.getItem("HighScore")==null?Highscore:localStorage.getItem("HighScore")}`
+    highscore.innerHTML = `High Score : ${localStorage.getItem("HighScore")==null?0:localStorage.getItem("HighScore")}`
     console.log(randomNumber)
 }
 
